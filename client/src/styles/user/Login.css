@@ -1,0 +1,63 @@
+@media (min-width:280px) {
+    .login{
+        display:flex;
+        justify-content:center;
+        min-height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(to right top,
+        #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        align-items:center;
+        padding: 10px;
+    }
+    .login > form{
+        background-color:rgba(255,255,255,0.1);
+        width: 95%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        padding-bottom: 40px;
+    }
+    .login > form h1{
+        text-align: center;
+        margin:20px auto;
+        color:white;
+    }
+    .forgot_password{
+        width: 100%;
+        margin:20px;
+        padding: 0px 15px;
+        color:blue;
+        cursor: pointer;
+    }
+    .login_submit{
+        padding: 7px 30px !important;
+        margin-top: 10px !important;
+        color:white !important;
+        background-color: rgba(255,255,255,0.2) !important;
+        width: 90%;
+    }
+    .backToHome{
+        display:block;
+        position:absolute;
+        top:90px;
+        left:5px;
+    }
+    .backToHome .icon{
+        color: white !important;
+    }
+}
+
+@media (min-width:750px){
+    .backToHome{
+        top: 250px;
+        left: 150px;
+    }
+}
+@media (min-width:830px){
+    .backToHome{
+        top: 90px;
+        left: 150px;
+    }
+}

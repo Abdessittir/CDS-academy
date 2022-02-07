@@ -1,0 +1,56 @@
+@media (min-width:280px) {
+    .home_title{
+        position: absolute;
+        top: 110px;
+        color: white;
+        width: 100%;
+        padding-left: 10px;
+        animation:animateOpacity 3s alternate ;
+        text-shadow: 2px 2px 5px black;
+        max-width: 800px;
+    }
+    .first_title{
+        font-size: 1.9rem;
+        margin-bottom: 15px;
+        color: #e31b6d;
+    }
+    .home_title.ar{
+        right: 10px;
+    }
+    @keyframes animateOpacity {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width:750px){
+    .home_title{
+        font-size: 2.2rem;
+        padding-left: 20px;
+    }
+    .first_title{
+        font-size: 2.2rem;
+    }
+    .home_title.ar{
+        right: 20px;
+    }
+}
+@media (min-width:810px){
+    .home_title{
+        top: 220px;
+    }
+}
+
+@media (min-width:1000px){
+    .home_title{
+        top: 150px;
+        padding-left: 50px;
+    }
+    .home_title.ar{
+        right: 50px;
+    }
+}

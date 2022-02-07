@@ -1,0 +1,7 @@
+@media (min-width:280px) {
+    .footer{
+        background-color: blue;
+        height: 100px;
+        width: 100%;
+    }
+}

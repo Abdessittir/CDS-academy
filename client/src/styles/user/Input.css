@@ -1,0 +1,75 @@
+@media (min-width:280px) {
+    .input_container{
+        display:flex;
+        width:90%;
+        margin-top:15px;
+        border-radius: 5px;
+        background-color: rgba(255,255,255,0.2);
+        position: relative;
+    }
+    .input_container > .phone_input{
+        height: 100%;
+        width: 100%;
+        margin-left: 10px;
+    }
+    .input_container > .phone_input > input{
+        padding: 10px;
+    }
+    .input_container > input,
+    .input_container .textArea,
+    .input_container > .phone_input > input{
+        flex: 1;
+        border:none;
+        outline:none;
+        background-color: transparent;
+        color:white;
+        font-size:18px;
+        font-family: Roboto;
+        padding-left: 10px;
+    }
+    .textArea{
+        height: 200px;
+        padding-top: 15px;
+    }
+    .input_container > input:active{
+        background-color: transparent;
+    }
+    .input_container > input::placeholder,
+    .textArea::placeholder,
+    .input_container > .phone_input > input::placeholder{
+        color:rgba(255, 255, 255, 0.5);
+    }
+    .input_container > p{
+        margin: 10px;
+        color:white !important;
+    }
+    .input_container > select{
+        width: 100%;
+        background-color:transparent;
+        border:none;
+        outline: none;
+        color: white;
+        font-size: 18px;
+    }
+    .input_container > select option {
+        color:black;
+        font-size: 18px;
+    }
+    .input_container > input[type="file"]{
+        padding-top: 10px;
+        z-index: 10;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .choose_file{
+        position:absolute;
+        top: 0px;
+        left:30px;
+        color:white;
+        cursor: pointer;
+        border:1px solid white;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

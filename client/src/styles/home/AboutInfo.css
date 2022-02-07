@@ -1,0 +1,36 @@
+@media (min-width:280px) {
+    .about__icon{
+        width: 100px !important;
+        height: 100px !important;
+        color: white !important;
+    }
+    
+    .about_infoIcon{
+        background-color: rgb(105, 164, 184);
+        padding: 30px;
+        border-radius: 50px 0px 50px 0px;
+        max-width: 160px;
+        max-height:160px ;
+    }
+    .about_info{
+        width: 300px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_info > div{
+        font-weight: 500;
+        color: #616161;
+        font-family: "Raleway-bold" sans-serif;
+        font-size: 18pt;
+        margin: 10px auto;
+    }
+    .about_info > p {
+        color: #616161;
+        text-align: center;
+        font-family: "Raleway-bold" sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}

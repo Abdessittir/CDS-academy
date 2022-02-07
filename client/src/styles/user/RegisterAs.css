@@ -1,0 +1,41 @@
+.register_as{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image: linear-gradient(to right top,
+        #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        align-items:center;
+}
+.register_as > div{
+    background-color:rgba(255,255,255,0.1);
+    height: 200px;
+    width: 90%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+.register_as h2{
+    text-align:center;
+    margin: 20px;
+    color: white;
+}
+.choose{
+    display:flex;
+    align-items:center;
+    height: 100px;
+    width: 100%;
+    justify-content:space-around;
+}
+.choose > p{
+    border:1px solid #e31b6d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color:#e31b6d;
+    cursor: pointer;
+}
+.choose > p:hover{
+    background-color:#e31b6d;
+    color:white;
+}

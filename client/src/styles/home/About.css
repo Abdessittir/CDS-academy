@@ -1,0 +1,14 @@
+@media (min-width:280px) {
+    .about{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 150px;
+    }
+}
+@media (min-width:750px){
+    .about{
+        padding-top: 50px;
+    }
+}

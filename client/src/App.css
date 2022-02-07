@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@300&family=Outfit:wght@300&family=Roboto:ital,wght@0,100;0,300;1,300&display=swap');
+.app{
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+.alert{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    max-width: 400px;
+    z-index: 100;
+}
+/*rgba(128, 255, 0)*/
+/* backgroun rgb(0, 30, 60)* /
+/* border rgb(19, 47, 76) */
