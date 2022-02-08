@@ -110,7 +110,10 @@ export const joinClass = catchAsyncErrors(async (req, res) =>{
 //student
 export const getClassDetails = catchAsyncErrors(async (req, res) =>{
 
-    const myClass = await Class.findById(req.params.id).populate("teacher").populate("userInfo");
+    const myClass = await Class.findById(req.params.id).populate({
+        path: "teacher",
+        populate: { path: 'userInfo' }
+    });
 
     res.status(200).send({
         success:true,

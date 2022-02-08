@@ -15,8 +15,10 @@ export function catchAsyncErrors(callback){
                 success:false,
                 message
             });
-            await Chunks.findOneAndDelete({files_id:req.file.id});
-            await Files.findOneAndDelete({_id:req.file.id});
+            if(req.file){
+                await Chunks.findOneAndDelete({files_id:req.file.id});
+                await Files.findOneAndDelete({_id:req.file.id});
+            }
             console.log(err.message);
         });
     }

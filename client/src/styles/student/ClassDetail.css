@@ -1,0 +1,28 @@
+@media (min-width:280px) {
+    .class_details{
+        width:100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        padding:50px 1px;
+        background-image: linear-gradient(to right top,
+        #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+    .close_btn{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .btn_icon{
+        color: white !important;
+    }
+    .class_teacher, .class_info{
+        width: 95%;
+        max-width: 500px;
+        min-height:400px;
+        background-color: rgba(255,255,255,0.1);
+        margin-top: 20px;
+    }
+}

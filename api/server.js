@@ -6,8 +6,14 @@ import DB from "./models/index.js";
 import authRouter from "./routes/auth.routes.js";
 import classRouter from "./routes/class.routes.js";
 import teacherRouter from "./routes/teacher.routes.js";
+import cors from "cors"
 
 const APP = express();
+
+const options = {
+    "Access-Control-Allow-Origin": 'https://localhost:3000',
+}
+APP.use(cors(options));
 APP.use(express.json());
 APP.use(cookieParser());
 APP.use(bodyParser.urlencoded({ extended: true }));

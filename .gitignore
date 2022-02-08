@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/utils/callbacks.js
 /client/node_modules
 /client/.pnp
 /client/.pnp.js

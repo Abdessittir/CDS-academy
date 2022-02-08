@@ -11,7 +11,6 @@ import { useAlert } from "./contexts/alertContext";
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Register from "./components/user/Register";
-import Dashboard from "./components/Dashboard";
 import { useAuth } from "./contexts/userContext";
 import { getUserDetails } from "./services/userService";
 import ClassDetail from "./components/student/ClassDetail";

@@ -4,10 +4,13 @@ import { useAlert } from "../../contexts/alertContext";
 import { useClass } from "../../contexts/classContext";
 import { getClassDetail } from "../../services/studentService";
 import { ClassProvider } from "../../contexts/classContext";
+import "../../styles/student/ClassDetail.css";
+import { IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 function ClassDetail(){
     
-    const [classdetail, setClassDetail] = useState(null);
+    const [classDetail, setClassDetail] = useState(null);
     const params = useParams();
     const {myClass, setMyClass} = useClass();
     const [loading, setLoading] = useState(true);
@@ -37,16 +40,23 @@ function ClassDetail(){
             fetchData();
         }
         setLoading(false);
-        console.log(findClass);
 
-    }, [params, myClass, setAlert, setMyClass]);
+    }, []);
     
     if(loading){
         return <h1>Loading</h1>
     }
-    console.log(classdetail)
+
     return (
-        <div></div>
+        <div className="class_details">
+            <div className="close_btn">
+            <IconButton className="btn_icon">
+                <CloseIcon fontSize="large" />
+            </IconButton>
+            </div>
+            <div className="class_teacher"></div>
+            <div className="class_info"></div>
+        </div>
     );
 }
 
