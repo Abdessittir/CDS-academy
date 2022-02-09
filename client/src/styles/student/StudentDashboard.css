@@ -1,16 +1,16 @@
 @media (min-width:250px) {
-    .student_dashboard{
+    .student_dashboard, .teacher_dashboard{
         min-height: 100vh;
         width: 100vw;
         background-image: linear-gradient(to right top,
         #051937, #004d7a, #008793, #00bf72, #a8eb12);
         padding-top: 70px;
     }
-    .student_dashboard > h1{
+    .student_dashboard > h1, .teacher_dashboard > h1{
         color: white;
         text-align: center;
     }
-    .studentClasses{
+    .studentClasses, .teacherClasses{
         display:flex;
         flex-wrap: wrap;
         justify-content:center;

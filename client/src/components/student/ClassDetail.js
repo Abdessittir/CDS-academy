@@ -7,21 +7,28 @@ import { ClassProvider } from "../../contexts/classContext";
 import "../../styles/student/ClassDetail.css";
 import { IconButton } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate} from "react-router-dom";
 
 function ClassDetail(){
     
-    const [classDetail, setClassDetail] = useState(null);
+    const [classInfo, setClassInfo] = useState(null);
+    const [teacher, setTeacher] = useState(null);
     const params = useParams();
     const {myClass, setMyClass} = useClass();
     const [loading, setLoading] = useState(true);
     const {setAlert} = useAlert();
+    const navigate = useNavigate();
 
     useEffect(() =>{
         async function fetchData(){
             const response = await getClassDetail(params.id);
 
             if(response.success){
-                setClassDetail(response.myClass);
+                setClassInfo({
+                    ...response.myClass,
+                    teacher:undefined,
+                });
+                setTeacher(response.myClass.teacher);
                 setMyClass(prev => [...prev, response.myClass]);
             }else{
                 setAlert({
@@ -35,7 +42,11 @@ function ClassDetail(){
         let findClass = myClass.find(element => element._id === params.id);
 
         if(findClass){
-            setClassDetail(findClass);
+            setClassInfo({
+                ...findClass,
+                teacher:undefined
+            });
+            setTeacher(findClass.teacher);
         }else{
             fetchData();
         }
@@ -49,12 +60,16 @@ function ClassDetail(){
 
     return (
         <div className="class_details">
-            <div className="close_btn">
+            <div onClick={() =>navigate("/student_dashboard")} className="close_btn">
             <IconButton className="btn_icon">
                 <CloseIcon fontSize="large" />
             </IconButton>
             </div>
-            <div className="class_teacher"></div>
+            <div className="class_teacher">
+                <div className="image_container">
+                    <img src={teacher?.userInfo.avatar.url} alt={teacher?.userInfo.fullName} />
+                </div>
+            </div>
             <div className="class_info"></div>
         </div>
     );

@@ -30,6 +30,7 @@ function Login(){
             ...prev,
             [event.target.name]:event.target.value
         }));
+        
         if(alert.from === "login"){
             setAlert({
                 from:"",

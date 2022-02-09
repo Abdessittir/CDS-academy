@@ -38,9 +38,11 @@
     }
     .bar.active::before{
         transform: rotate(45deg);
+        background-color: white;
     }
     .bar.active::after{
         transform: rotate(-45deg);
+        background-color: white;
     }
 }
 @media (min-width:750px){

@@ -6,6 +6,7 @@ import DB from "./models/index.js";
 import authRouter from "./routes/auth.routes.js";
 import classRouter from "./routes/class.routes.js";
 import teacherRouter from "./routes/teacher.routes.js";
+import fileRouter from "./routes/file.routes.js";
 import cors from "cors"
 
 const APP = express();
@@ -34,6 +35,7 @@ DB.mongoose.connect(process.env.CONNECTION_URL)
 APP.use("/api", authRouter);
 APP.use("/api", teacherRouter);
 APP.use("/api", classRouter);
+APP.use("/files", fileRouter);
 
 const port = process.env.PORT ?? 8080;
 APP.listen(port , () => {

@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import Buttons from "./Buttons";
 import Footer from "./Footer";
 import MetaData from "../../MetaData";
+import Sidebar from "./Sidebar";
 
 function Home(){
     const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -27,6 +28,9 @@ function Home(){
             <LangSelector />
             <Humberger
                 callback={() =>setSideBarOpen(prev => !prev)}
+                open={sideBarOpen}
+            />
+            <Sidebar 
                 open={sideBarOpen}
             />
             <Title />
