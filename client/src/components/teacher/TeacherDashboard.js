@@ -8,6 +8,7 @@ import {useAuth} from "../../contexts/userContext";
 import ClassCard from "../student/ClassCard";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Sidebar from "../home/Sidebar";
 
 function TeacherDashboard(){
     const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -30,6 +31,7 @@ function TeacherDashboard(){
                 callback={() =>setSideBarOpen(prev => !prev)}
                 open={sideBarOpen}
             />
+            <Sidebar open={sideBarOpen} />
             <LangSelector />
 
             <div className="teacherClasses">

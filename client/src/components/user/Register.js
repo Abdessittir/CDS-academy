@@ -98,7 +98,7 @@ function Register(){
                 loading:false,
                 info:response.student ?? response.teacher,
             })
-            console.log(response);
+            localStorage.setItem("user",true);
         }else{
             setUser(prev => ({
                 ...prev,

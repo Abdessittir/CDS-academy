@@ -17,6 +17,7 @@ import ClassDetail from "./components/student/ClassDetail";
 import UserRoute from "./components/UserRoute";
 import StudentDashboard from "./components/student/StudentDashboard";
 import TeacherDashboard from "./components/teacher/TeacherDashboard";
+import CreateClass from "./components/teacher/CreateClass";
 
 
 function App() {
@@ -64,7 +65,12 @@ function App() {
         message:user.error
       });
     }
-  }, [user])
+  }, [user]);
+
+  function handleClose(){
+    setUser(prev => ({...prev, error:null}));
+    setAlert({type:"", message:"",from:""})
+  }
 
   return (
     <Fragment>
@@ -79,6 +85,7 @@ function App() {
               <Route path="/student_dashboard" element={<StudentDashboard />} />
               <Route path="/teacher_dashboard" element={<TeacherDashboard />} />
               <Route path="/student/class/:id" element={<ClassDetail />} />
+              <Route path="/class/create" element={<CreateClass />} />
             </Route>
 
           </Routes>
@@ -86,7 +93,7 @@ function App() {
 
         {alert.type && (
           <Alert
-            onClose={() =>{ setAlert({type:"", message:"",from:"",})}}
+            onClose={handleClose}
             className="alert"
             severity={alert.type}
           >
